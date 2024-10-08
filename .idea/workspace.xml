@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7fa2642-e7b2-482b-9ed4-a583d37092cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/movielistingcli/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/movielistingcli/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <workItem from="1728207265758" duration="1328000" />
       <workItem from="1728209258976" duration="691000" />
       <workItem from="1728269419484" duration="2166000" />
-      <workItem from="1728365725655" duration="317000" />
+      <workItem from="1728365725655" duration="1136000" />
     </task>
     <servers />
   </component>
