@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7fa2642-e7b2-482b-9ed4-a583d37092cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/movielistingcli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/movielistingcli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/movielistingcli/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/movielistingcli/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/MovieServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/MovieServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +59,7 @@
       <recent name="C:\Users\Farhan\Desktop\cli\MovieListingCli\src\main\java\org\movielistingcli" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.movielistingcli.Main" />
       <module name="MovieListingCli" />
@@ -70,9 +73,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MovieServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieListingCli" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.MovieServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MovieServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +107,7 @@
       <workItem from="1728207265758" duration="1328000" />
       <workItem from="1728209258976" duration="691000" />
       <workItem from="1728269419484" duration="2166000" />
-      <workItem from="1728365725655" duration="1136000" />
+      <workItem from="1728365725655" duration="2299000" />
     </task>
     <servers />
   </component>

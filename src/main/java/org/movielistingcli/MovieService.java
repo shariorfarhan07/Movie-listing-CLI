@@ -6,7 +6,7 @@ import org.movielistingcli.pojo.User;
 import java.util.*;
 
 public class MovieService {
-    public static void initializeMovies(List<Movie> movies) {
+    public  void initializeMovies(List<Movie> movies) {
         movies.add(new Movie("Inception", "Leonardo DiCaprio", "Sci-Fi", "2010-07-16", 160000000));
         movies.add(new Movie("The Matrix", "Keanu Reeves", "Action", "1999-03-31", 63000000));
         movies.add(new Movie("Titanic", "Leonardo DiCaprio", "Romance", "1997-12-19", 200000000));
@@ -23,7 +23,7 @@ public class MovieService {
         movies.add(new Movie("Jurassic Park", "Sam Neill", "Adventure", "1993-06-11", 63000000));
     }
 
-    public static int getUserChoice(Scanner scanner) {
+    public  int getUserChoice(Scanner scanner) {
         int choice = -1;
         boolean validInput = false;
         while (!validInput) {
@@ -39,7 +39,7 @@ public class MovieService {
         return choice;
     }
 
-    public static void registerUser(Scanner scanner, Map<String, User> users) {
+    public void registerUser(Scanner scanner, Map<String, User> users) {
         System.out.print("Enter your email to register: ");
         String email = scanner.nextLine();
         if (!email.contains("@") || !email.endsWith(".com")) {
@@ -52,7 +52,7 @@ public class MovieService {
         }
     }
 
-    public static User loginUser(Scanner scanner, Map<String, User> users) {
+    public User loginUser(Scanner scanner, Map<String, User> users) {
         System.out.print("Enter your email to login: ");
         String email = scanner.nextLine();
         if (users.containsKey(email)) {
@@ -64,7 +64,7 @@ public class MovieService {
         }
     }
 
-    public static void searchMovies(Scanner scanner, List<Movie> movies) {
+    public void searchMovies(Scanner scanner, List<Movie> movies) {
         System.out.print("Enter search term (title, cast, category): ");
         String query = scanner.nextLine().toLowerCase();
         movies.stream()
@@ -75,7 +75,7 @@ public class MovieService {
                 .forEach(System.out::println);
     }
 
-    public static void viewMovieDetails(Scanner scanner, List<Movie> movies) {
+    public void viewMovieDetails(Scanner scanner, List<Movie> movies) {
         System.out.print("Enter movie title to view details: ");
         String title = scanner.nextLine();
         movies.stream()
@@ -84,7 +84,7 @@ public class MovieService {
                 .ifPresentOrElse(System.out::println, () -> System.out.println("Movie not found."));
     }
 
-    public static void addMovieToFavorites(Scanner scanner, User currentUser, List<Movie> movies) {
+    public void addMovieToFavorites(Scanner scanner, User currentUser, List<Movie> movies) {
         if (currentUser == null) {
             System.out.println("Please login first.");
             return;
@@ -100,7 +100,7 @@ public class MovieService {
                 }, () -> System.out.println("Movie not found."));
     }
 
-    public static void removeMovieFromFavorites(Scanner scanner, User currentUser) {
+    public void removeMovieFromFavorites(Scanner scanner, User currentUser) {
         if (currentUser == null) {
             System.out.println("Please login first.");
             return;
@@ -110,7 +110,7 @@ public class MovieService {
         currentUser.removeFavoriteMovie(title);
     }
 
-    public static void viewFavoriteMovies(User currentUser) {
+    public void viewFavoriteMovies(User currentUser) {
         if (currentUser == null) {
             System.out.println("Please login first.");
             return;
@@ -118,7 +118,7 @@ public class MovieService {
         currentUser.getFavoriteMovies().forEach(System.out::println);
     }
 
-    public static void searchFavoriteMovies(Scanner scanner, User currentUser) {
+    public void searchFavoriteMovies(Scanner scanner, User currentUser) {
         if (currentUser == null) {
             System.out.println("Please login first.");
             return;
@@ -133,7 +133,7 @@ public class MovieService {
                 .forEach(System.out::println);
     }
 
-    public static User logout() {
+    public User logout() {
         System.out.println("Logged out successfully.");
         return null;
     }

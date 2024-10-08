@@ -7,13 +7,15 @@ import org.movielistingcli.pojo.User;
 import java.util.*;
 
 public class Main {
-    static Scanner scanner = new Scanner(System.in);
-    static List<Movie> movies = new ArrayList<>();
-    static Map<String, User> users = new HashMap<>();
-    static User currentUser = null;
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final  List<Movie> movies = new ArrayList<>();
+    private static final  Map<String, User> users = new HashMap<>();
+    private static User currentUser = null;
+    private static MovieService movieService;
 
     public static void main(String[] args) {
-        MovieService.initializeMovies(movies);
+        movieService=new MovieService();
+        movieService.initializeMovies(movies);
         showMainMenu();
     }
 
@@ -33,18 +35,18 @@ public class Main {
             System.out.println("0. Exit");
             System.out.print("Select an option: ");
 
-            int choice = MovieService.getUserChoice(scanner);
+            int choice = movieService.getUserChoice(scanner);
 
             switch (choice) {
-                case 1 -> MovieService.registerUser(scanner, users);
-                case 2 -> currentUser = MovieService.loginUser(scanner, users);
-                case 3 -> MovieService.searchMovies(scanner, movies);
-                case 4 -> MovieService.viewMovieDetails(scanner, movies);
-                case 5 -> MovieService.addMovieToFavorites(scanner, currentUser, movies);
-                case 6 -> MovieService.removeMovieFromFavorites(scanner, currentUser);
-                case 7 -> MovieService.viewFavoriteMovies(currentUser);
-                case 8 -> MovieService.searchFavoriteMovies(scanner, currentUser);
-                case 9 -> currentUser = MovieService.logout();
+                case 1 -> movieService.registerUser(scanner, users);
+                case 2 -> currentUser = movieService.loginUser(scanner, users);
+                case 3 -> movieService.searchMovies(scanner, movies);
+                case 4 -> movieService.viewMovieDetails(scanner, movies);
+                case 5 -> movieService.addMovieToFavorites(scanner, currentUser, movies);
+                case 6 -> movieService.removeMovieFromFavorites(scanner, currentUser);
+                case 7 -> movieService.viewFavoriteMovies(currentUser);
+                case 8 -> movieService.searchFavoriteMovies(scanner, currentUser);
+                case 9 -> currentUser = movieService.logout();
                 case 0 -> {
                     exit = true;
                     System.out.println("Thank you for using the Movie Listing Application. Goodbye!");
