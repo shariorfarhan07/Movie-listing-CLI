@@ -33,7 +33,7 @@ public class MovieService {
                 validInput = true;
             } catch (InputMismatchException ex) {
                 System.out.println("Please provide a valid input (number between 0-9).");
-                scanner.nextLine(); // Clear invalid input
+                scanner.nextLine();
             }
         }
         return choice;
